@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima App</title>
+    <link rel="stylesheet" href=".css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="weather-container">
+        <h1>Clima App</h1>
+        
+        <div class="search-container">
+            <input type="text" id="city-input" placeholder="Digite o nome da cidade..." autocomplete="off">
+            <button id="search-btn" aria-label="Buscar cidade"><i class="fas fa-search"></i></button>
+            <button id="location-btn"><i class="fas fa-location-arrow"></i></button>
+        </div>
+        
+        <div class="error-message" id="error-message"></div>
+        
+        <div class="weather-card" id="weather-card">
+            <div class="loading" id="loading">
+                <div class="loader"></div>
+                <p>Carregando dados...</p>
+            </div>
+            
+            <div class="weather-header">
+                <h2 id="city-name">-</h2>
+                <p id="current-date">-</p>
+            </div>
+            
+            <div class="weather-main">
+                <div class="temperature">
+                    <span id="current-temp">-</span>
+                    <span class="unit-toggle">
+                        <button class="active" id="celsius-btn">°C</button>
+                        <button id="fahrenheit-btn">°F</button>
+                    </span>
+                </div>
+                <div class="weather-icon" id="weather-icon">
+                    <i class="fas fa-question"></i>
+                </div>
+                <div class="weather-description" id="weather-description">-</div>
+            </div>
+            
+            <div class="weather-details">
+                <div class="detail">
+                    <i class="fas fa-temperature-high"></i>
+                    <span>Sensação</span>
+                    <span id="feels-like">-</span>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-tint"></i>
+                    <span>Umidade</span>
+                    <span id="humidity">-</span>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-wind"></i>
+                    <span>Vento</span>
+                    <span id="wind-speed">-</span>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-compress-arrows-alt"></i>
+                    <span>Pressão</span>
+                    <span id="pressure">-</span>
+                </div>
+            </div>
+            
+            <div class="weather-forecast" id="forecast">
+                <!-- Previsão para os próximos dias será inserida aqui via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src=".js"></script>
+</body>
+</html>
